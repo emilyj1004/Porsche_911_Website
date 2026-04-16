@@ -1,0 +1,256 @@
+
+/* porsche design system css custom properties, choosing light theme */
+
+
+:root {
+    /* Colors */
+    --color-primary:             #000000;
+    --color-bg-base:             #ffffff;
+    --color-bg-surface:          #f2f2f2;   /* card backgrounds */
+    --color-bg-shading:          #00000080; /* overlays */
+    --color-contrast-low:        #e3e3e3;
+    --color-contrast-medium:     #626262;
+    --color-contrast-high:       #212121;
+  
+    /* typography*/
+* {font-family:'Porsche Next', Arial, Helvetica, sans-serif;}
+  
+    --font-size-display-large:   clamp(2.5rem, 5vw, 5rem);   /* pds-display-large */
+    --font-size-display-medium:  clamp(2rem,   4vw, 3.75rem);
+    --font-size-heading-xl:      clamp(1.5rem, 3vw, 2.5rem); /* pds-heading-x-large */
+    --font-size-heading-lg:      clamp(1.25rem,2vw, 2rem);   /* pds-heading-large */
+    --font-size-heading-md:      clamp(1rem,   1.5vw, 1.5rem);
+    --font-size-text-md:         1rem;                        /* pds-text-medium (default body) */
+    --font-size-text-sm:         0.875rem;                    /* pds-text-small */
+  
+    --font-weight-regular:       400;
+    --font-weight-semi-bold:     600;
+  
+    --line-height-heading:       1.2;
+    --line-height-text:          1.6;
+  
+    /* Spacing — mirrors $pds-spacing-fluid-* */
+    --spacing-xs:   0.5rem;
+    --spacing-sm:   1rem;
+    --spacing-md:   1.5rem;
+    --spacing-lg:   2.5rem;
+    --spacing-xl:   4rem;
+  
+    /* border */
+    --border-radius-sm: 4px;   /* $pds-border-radius-small */
+    --border-radius-md: 8px;
+  
+    /* Shadow (card hover) — mirrors pds drop-shadow styles */
+    --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.18);
+  
+    /* Motion — mirrors $pds-motion-duration-* */
+    --transition-speed: 0.24s;
+    --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  
+  /* base reset */
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family:      var(--font-family);
+    font-size:        var(--font-size-text-md);
+    line-height:      var(--line-height-text);
+    color:            var(--color-primary);
+    background-color: var(--color-bg-base);
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  
+  /* navbar */
+  
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-bg-base);
+    border-bottom: 1px solid var(--color-contrast-low);
+  }
+  
+  .navbar {
+    font-size: var(--font-size-heading-md);
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: 0.02em;
+  }
+  
+  /* About button — underline animates in on hover (per your JS plan) */
+  .navbar_btn {
+    font-size:   var(--font-size-text-sm);
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color var(--transition-speed) var(--transition-easing);
+  }
+  
+  .navbar_btn:hover {
+    border-bottom-color: var(--color-primary);
+  }
+  
+  
+  /* year tabs */
+  
+  .tab_bar {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    overflow-x: auto;
+    border-bottom: 1px solid var(--color-contrast-low);
+    font-family:    var(--font-family);
+    font-size:      var(--font-size-text-sm);
+    font-weight:    var(--font-weight-semi-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background:     none;
+    border:         none;
+    border-bottom:  2px solid transparent;
+    padding:        var(--spacing-xs) 0;
+    cursor:         pointer;
+    transition:     border-color var(--transition-speed) var(--transition-easing),
+                    color       var(--transition-speed) var(--transition-easing);
+  }
+  
+  .tab_bar_tab:hover,
+  .tab_bar_tab--active {
+    border-bottom-color: var(--color-primary);
+  }
+  
+  
+  /* cards */
+  
+  .main_content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .cards_section {
+    padding: var(--spacing-lg);
+  }
+  
+  .year_group {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  /* Section titles */
+  .year_group_label {
+    font-size:     var(--font-size-heading-xl);
+    font-weight:   var(--font-weight-semi-bold);
+    line-height:   var(--line-height-heading);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--color-contrast-low);
+  }
+  
+  /* Responsive grid */
+  .card_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  
+  /* car card */
+  
+  .car_card {
+    background-color: var(--color-bg-surface);
+    border-radius:    var(--border-radius-md);
+    overflow:         hidden;
+    transition:       box-shadow var(--transition-speed) var(--transition-easing),
+                      transform  var(--transition-speed) var(--transition-easing);
+  }
+  
+  /* Shadow on hover*/
+  .car_card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform:  translateY(-4px);
+  }
+  
+  .car_card_image {
+    aspect-ratio: 16 / 9;
+    object-fit:   cover;
+  }
+  
+  .car_card_body {
+    padding: var(--spacing-md);
+  }
+  
+  /* model name - heading-medium scale */
+  .car_card_model {
+    font-size:     var(--font-size-heading-md);
+    font-weight:   var(--font-weight-semi-bold);
+    line-height:   var(--line-height-heading);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  /* year — pds-text-small, de-emphasized */
+  .car_card_year {
+    font-size: var(--font-size-text-sm);
+    color:     var(--color-contrast-medium);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  /* top speed — pds-text-small */
+  .car_card_speed {
+    font-size:   var(--font-size-text-sm);
+    font-weight: var(--font-weight-semi-bold);
+    letter-spacing: 0.04em;
+  }
+  
+  
+  /* about */
+  
+  .about_section {
+    background-color: var(--color-primary); /* dark band — PDS dark theme bg */
+    color:            var(--color-bg-base);
+    padding:          var(--spacing-xl) var(--spacing-lg);
+  }
+  
+  .about_section_inner {
+    max-width: 800px;
+    margin:    0 auto;
+  }
+  
+  .about_section_title {
+    font-size:     var(--font-size-display-medium);
+    font-weight:   var(--font-weight-semi-bold);
+    line-height:   var(--line-height-heading);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .about_section_subtitle {
+    font-size:     var(--font-size-heading-md);
+    font-weight:   var(--font-weight-semi-bold);
+    margin-bottom: var(--spacing-xs);
+    margin-top:    var(--spacing-md);
+  }
+  
+  .about_section_text {
+    font-size:   var(--font-size-text-md);
+    line-height: var(--line-height-text);
+    color:       #c8c8c8; /* pds-theme-dark-contrast-high approximate */
+  }
