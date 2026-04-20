@@ -12,121 +12,94 @@
   <body>
 
 <!-- navbar -->
-
     <nav class="navbar">
       <span class="navbar_title">Porsche 911 Series</span>
-      <a href="#about" class="navbar_btn">About 911</a>
+      <a href="about.html" class="navbar_btn">About 911</a>
     </nav>
 
+<!-- hero -->
+    <section class="hero_section">
+      <video class="hero_video" autoplay muted loop playsinline>
+        <source src="Porsche_hero_video.mp4" type="video/mp4" />
+      </video>
+      <div class="hero_text">
+        <h1 class="hero_title">Porsche 911 Series</h1>
+        <h3 class="hero_subtitle">My favorite models throughout history</h3>
+      </div>
+    </section>
 
-<main class="main_content">
+    <!-- card section -->
+    <main class="main_content">
+      <section class="cards_section">
 
-    <!-- year tab Bar -->
-    <div class="tab_bar" id="tab_bar"></div>
-
-
-    <section class="cards_section" id="cards_section">
-        <!-- year group -->
-
-        <div class="year_group" id="group_2012-Present">
+        <!-- 2012-Present -->
+        <div>
           <h2 class="year_group_label">2012 - Present</h2>
           <div class="card_grid">
-
-
-            <!-- 2019 - Present cards -->
             <article class="car_card">
-              <img class="car_card_image" src="18_heritage_3_4_front_high.jpg" alt="2024 Porsche 911 Carrera S"/>
-              <p>Model:</p>
-              <p>Year:</p>
-              <p>Top speed:</p>
-
+              <img class="car_card_image" src="7.jpg" alt="2026 Porsche 911 GT3 S/C"/>
+              <p><strong>Model</strong> - 911 GT3 S/C (Sport Cabriolet)</p>
+              <p><strong>Year</strong> - 2026</p>
+              <p><strong>Top speed</strong> - 194 mph</p>
+              <p><strong>Engine</strong> - 4.0L naturally aspirated flat-six, 502hp</p>
+              <p><strong>Fun Fact</strong> - The first-ever production 911 GT3 convertible, manual with a naturally aspirated engine that revs to 9,000 rpm</p>
+              <div class="card_audio">
+                <audio id="audio" src="NEW Porsche 911 GT3 S_C (992.2) - Pure Sound _ Drive _ Cabriolet.mp3"></audio>
+                <button class="audio_btn" onclick="playAudio()">Play</button>
+                <progress id="audio_bar" value="0" max="9"></progress>
+              </div>
             </article>
-    </div>
-    <div class="year_group" id="group_1998 - 2012">
-        <h2 class="year_group_label">1998 - 2012</h2>
-        <div class="card_grid">
+          </div>
+        </div>
 
+        <!-- 1998-2012 -->
+        <div>
+          <h2 class="year_group_label">1998 - 2012</h2>
+          <div class="card_grid">
+            <article class="car_card">
+              <img class="car_card_image" src="1998-2012.jpg" alt="2006 Porsche 911 GT3 RS"/>
+              <p><strong>Model</strong> - 911 GT3 RS (997)</p>
+              <p><strong>Year</strong> - 2006</p>
+              <p><strong>Top speed</strong> - 193 mph</p>
+              <p><strong>Engine</strong> - 3.6L naturally aspirated flat-six, 415hp</p>
+              <p><strong>Fun Fact</strong> - Lightweight, no turbo, pure driving experience, many consider it the greatest 911 ever made</p>
+            </article>
+          </div>
+        </div>
 
-          <!-- 2019 - Present cards -->
-          <article class="car_card">
-            <img class="car_card_image" src="18_heritage_3_4_front_high.jpg" alt="2024 Porsche 911 Carrera S"/>
-            <p>Model:</p>
-            <p>Year:</p>
-            <p>Top speed:</p>
+        <!-- 1988-1998 -->
+        <div>
+          <h2 class="year_group_label">1989 - 1998</h2>
+          <div class="card_grid">
+            <article class="car_card">
+              <img class="car_card_image" src="1989-1998.jpg" alt="1994 Porsche 911 Carrera 993"/>
+              <p><strong>Model</strong> - 911 Carrera (993)</p>
+              <p><strong>Year</strong> - 1994</p>
+              <p><strong>Top speed</strong> - 168 mph</p>
+              <p><strong>Engine</strong> - 3.6L air-cooled flat-six, 272hp</p>
+              <p><strong>Fun Fact</strong> - The last air-cooled 911 ever made, widely considered the most beautiful and collectible 911 of all time</p>
+            </article>
+          </div>
+        </div>
 
-          </article>
-  </div>
-  <div class="year_group" id="group_1989 - 1998">
-    <h2 class="year_group_label">1989 - 1998</h2>
-    <div class="card_grid">
+        <!-- 1963-1988 -->
+        <div>
+          <h2 class="year_group_label">1963 - 1989</h2>
+          <div class="card_grid">
+            <article class="car_card">
+              <img class="car_card_image" src="1963-1989.jpg" alt="1975 Porsche 911 Turbo 930"/>
+              <p><strong>Model</strong> - 911 Turbo (930)</p>
+              <p><strong>Year</strong> - 1975</p>
+              <p><strong>Top speed</strong> - 155 mph</p>
+              <p><strong>Engine</strong> - 3.0L air-cooled turbocharged flat-six, 260hp</p>
+              <p><strong>Fun Fact</strong> - The original turbocharged 911, so brutal and unpredictable to drive it earned the nickname "The Widowmaker"</p>
+            </article>
+          </div>
+        </div>
 
+      </section>
+    </main>
 
-      <!-- 2019 - Present cards -->
-      <article class="car_card">
-        <img class="car_card_image" src="18_heritage_3_4_front_high.jpg" alt="2024 Porsche 911 Carrera S"/>
-        <p>Model:</p>
-        <p>Year:</p>
-        <p>Top speed:</p>
-
-      </article>
-</div>
-<div class="year_group" id="group_1963 - 1989">
-    <h2 class="year_group_label">1963 - 1989</h2>
-    <div class="card_grid">
-
-
-      <!-- 2019 - Present cards -->
-      <article class="car_card">
-        <img class="car_card_image" src="18_heritage_3_4_front_high.jpg" alt="2024 Porsche 911 Carrera S"/>
-        <p>Model:</p>
-        <p>Year:</p>
-        <p>Top speed:</p>
-
-      </article>
-</div>
-
-</section>
-</main>
-
-
-<!-- about -->
-
-<section class="about_section" id="about">
-    <div class="about_section_inner">
-      <h2 class="about_section_title">History of the Porsche 911</h2>
-      <h3 class="about_section_subtitle">Porsche 911 Origin</h3>
-      <p class="about_section_text">
-        The Porsche 911 was designed in the early 1960s by Butzi Porsche, grandson of the company's founder, as a replacement for their aging previous model. It debuted at the 1963 Frankfurt Motor Show under the name "901," but French automaker Peugeot already owned the rights to car names with a zero in the middle, so Porsche quietly swapped it to "911" before sales began in 1964. The name stuck, and so did the car. A few things made the original car revolutionary for its time:
-      </p>
-        <ul class="about_section_list">
-            <li>The flat-six engine was entirely new, smoother and more powerful than any Porsche that had come before</li>
-            <li>Styling was clean and timeless in a way almost no one appreciated at the time, it just "looked right"</li>
-            <li>It was designed to be a true grand tourer: fast enough to be exciting, comfortable enough for long trips</li>
-        </ul>
-
-      <h3 class="about_section_subtitle">Why the 911 is still Iconic</h3>
-      <p class="about_section_text">
-        The 911 lasted because Porsche found a formula that worked and refused to abandon it, a compact, 
-        stylish sports car with the engine in the back, delivering a driving experience unlike anything else
-         on the road. Rather than replacing it entirely every decade like most manufacturers do, Porsche treated
-          each new version as a refinement: a little more power, better technology, safer handling, but always 
-          recognizably a 911. This approach built an incredibly loyal fanbase who could buy a new car every few 
-          years and still feel at home, while the consistent silhouette made the 911 instantly recognizable worldwide.
-      </p>
-      <h3>Timeline</h3>
-      <p>
-        1963 - 1973 — The Original 911: Debuted at the 1963 Frankfurt Motor Show as the 901 before being renamed. Powered by a 2.0-liter air-cooled flat-six, with later models getting more power and a longer wheelbase for better handling.<br>
-        1973 - 1989 — The G-Series: The first major redesign, adding new bumpers to meet US safety laws while growing the engine from 2.7 to 3.2 liters. The legendary 911 Turbo (930) launched in 1974.<br>
-        1989 - 1993 — The 964: Introduced the first all-wheel drive 911, ABS brakes, and an optional automatic transmission — the 911's first steps into the modern era.<br>
-        1993 - 1998 — The 993: The last air-cooled 911, and the most collectible. A big visual redesign, improved handling, and a twin-turbocharged variant producing 408 hp.<br>
-        1997 - 2005 — The 996: A controversial but necessary shift to water-cooled engines to meet emissions rules. The "fried egg" headlights divided opinion, but it sold better than any previous 911.<br>
-        2005 - 2012 — The 997: Brought back the classic round headlights and introduced the PDK dual-clutch gearbox, which was faster than any manual transmission.<br>
-        2011 - 2019 — The 991: Built on an entirely new platform with a longer wheelbase. Electric steering replaced hydraulic, and turbos were eventually added across the whole Carrera range.<br>
-        2019 - Present — The 992: The current and widest 911 ever, with more aluminum, more power, a full-width LED rear light bar, and even an off-road Dakar variant.<br>
-      </p>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
