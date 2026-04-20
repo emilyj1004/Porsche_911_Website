@@ -4,27 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porsche 911 Series</title>
-<!-- porsche design system-->
     <link rel="stylesheet" href="https://cdn.ui.porsche.com/porsche-design-system/font/v1/porsche-next-w-la-regular.min.css"/>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
 
-<!-- navbar -->
+    <!-- navbar -->
     <nav class="navbar">
       <span class="navbar_title">Porsche 911 Series</span>
       <a href="about.html" class="navbar_btn">About 911</a>
     </nav>
 
-<!-- hero -->
+    <!-- hero -->
     <section class="hero_section">
       <video class="hero_video" autoplay muted loop playsinline>
         <source src="Porsche_hero_video.mp4" type="video/mp4" />
+        <track kind="captions" src="" label="English" />  <!-- FIX 3: track added -->
       </video>
       <div class="hero_text">
         <h1 class="hero_title">Porsche 911 Series</h1>
-        <h3 class="hero_subtitle">My favorite models throughout history</h3>
+        <h2 class="hero_subtitle">My favorite models throughout history</h2>  <!-- FIX 1: h3 → h2 -->
       </div>
     </section>
 
@@ -34,17 +34,21 @@
 
         <!-- 2012-Present -->
         <div>
-          <h2 class="year_group_label">2012 - Present</h2>
+          <h3 class="year_group_label">2012 - Present</h3>
           <div class="card_grid">
             <article class="car_card">
               <img class="car_card_image" src="7.jpg" alt="2026 Porsche 911 GT3 S/C"/>
-              <p><strong>Model</strong> - 911 GT3 S/C (Sport Cabriolet)</p>
-              <p><strong>Year</strong> - 2026</p>
-              <p><strong>Top speed</strong> - 194 mph</p>
-              <p><strong>Engine</strong> - 4.0L naturally aspirated flat-six, 502hp</p>
-              <p><strong>Fun Fact</strong> - The first-ever production 911 GT3 convertible, manual with a naturally aspirated engine that revs to 9,000 rpm</p>
+              <dl>                                        <!-- FIX 2: p+strong → dl/dt/dd -->
+                <dt>Model</dt><dd>911 GT3 S/C (Sport Cabriolet)</dd>
+                <dt>Year</dt><dd>2026</dd>
+                <dt>Top speed</dt><dd>194 mph</dd>
+                <dt>Engine</dt><dd>4.0L naturally aspirated flat-six, 502hp</dd>
+                <dt>Fun Fact</dt><dd>The first-ever production 911 GT3 convertible, manual with a naturally aspirated engine that revs to 9,000 rpm</dd>
+              </dl>
               <div class="card_audio">
-                <audio id="audio" src="NEW Porsche 911 GT3 S_C (992.2) - Pure Sound _ Drive _ Cabriolet.mp3"></audio>
+                <audio id="audio" src="NEW Porsche 911 GT3 S_C (992.2) - Pure Sound _ Drive _ Cabriolet.mp3">
+                  <track kind="captions" src="" label="English" />  <!-- FIX 3: track added -->
+                </audio>
                 <button class="audio_btn" onclick="playAudio()">Play</button>
                 <progress id="audio_bar" value="0" max="9"></progress>
               </div>
@@ -54,45 +58,51 @@
 
         <!-- 1998-2012 -->
         <div>
-          <h2 class="year_group_label">1998 - 2012</h2>
+          <h3 class="year_group_label">1998 - 2012</h3>
           <div class="card_grid">
             <article class="car_card">
               <img class="car_card_image" src="1998-2012.jpg" alt="2006 Porsche 911 GT3 RS"/>
-              <p><strong>Model</strong> - 911 GT3 RS (997)</p>
-              <p><strong>Year</strong> - 2006</p>
-              <p><strong>Top speed</strong> - 193 mph</p>
-              <p><strong>Engine</strong> - 3.6L naturally aspirated flat-six, 415hp</p>
-              <p><strong>Fun Fact</strong> - Lightweight, no turbo, pure driving experience, many consider it the greatest 911 ever made</p>
+              <dl>
+                <dt>Model</dt><dd>911 GT3 RS (997)</dd>
+                <dt>Year</dt><dd>2006</dd>
+                <dt>Top speed</dt><dd>193 mph</dd>
+                <dt>Engine</dt><dd>3.6L naturally aspirated flat-six, 415hp</dd>
+                <dt>Fun Fact</dt><dd>Lightweight, no turbo, pure driving experience, many consider it the greatest 911 ever made</dd>
+              </dl>
             </article>
           </div>
         </div>
 
-        <!-- 1988-1998 -->
+        <!-- 1989-1998 -->
         <div>
-          <h2 class="year_group_label">1989 - 1998</h2>
+          <h3 class="year_group_label">1989 - 1998</h3>
           <div class="card_grid">
             <article class="car_card">
               <img class="car_card_image" src="1989-1998.jpg" alt="1994 Porsche 911 Carrera 993"/>
-              <p><strong>Model</strong> - 911 Carrera (993)</p>
-              <p><strong>Year</strong> - 1994</p>
-              <p><strong>Top speed</strong> - 168 mph</p>
-              <p><strong>Engine</strong> - 3.6L air-cooled flat-six, 272hp</p>
-              <p><strong>Fun Fact</strong> - The last air-cooled 911 ever made, widely considered the most beautiful and collectible 911 of all time</p>
+              <dl>
+                <dt>Model</dt><dd>911 Carrera (993)</dd>
+                <dt>Year</dt><dd>1994</dd>
+                <dt>Top speed</dt><dd>168 mph</dd>
+                <dt>Engine</dt><dd>3.6L air-cooled flat-six, 272hp</dd>
+                <dt>Fun Fact</dt><dd>The last air-cooled 911 ever made, widely considered the most beautiful and collectible 911 of all time</dd>
+              </dl>
             </article>
           </div>
         </div>
 
-        <!-- 1963-1988 -->
+        <!-- 1963-1989 -->
         <div>
-          <h2 class="year_group_label">1963 - 1989</h2>
+          <h3 class="year_group_label">1963 - 1989</h3>
           <div class="card_grid">
             <article class="car_card">
               <img class="car_card_image" src="1963-1989.jpg" alt="1975 Porsche 911 Turbo 930"/>
-              <p><strong>Model</strong> - 911 Turbo (930)</p>
-              <p><strong>Year</strong> - 1975</p>
-              <p><strong>Top speed</strong> - 155 mph</p>
-              <p><strong>Engine</strong> - 3.0L air-cooled turbocharged flat-six, 260hp</p>
-              <p><strong>Fun Fact</strong> - The original turbocharged 911, so brutal and unpredictable to drive it earned the nickname "The Widowmaker"</p>
+              <dl>
+                <dt>Model</dt><dd>911 Turbo (930)</dd>
+                <dt>Year</dt><dd>1975</dd>
+                <dt>Top speed</dt><dd>155 mph</dd>
+                <dt>Engine</dt><dd>3.0L air-cooled turbocharged flat-six, 260hp</dd>
+                <dt>Fun Fact</dt><dd>The original turbocharged 911, so brutal and unpredictable to drive it earned the nickname "The Widowmaker"</dd>
+              </dl>
             </article>
           </div>
         </div>
