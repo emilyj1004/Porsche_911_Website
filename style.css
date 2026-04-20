@@ -163,7 +163,7 @@ img {
 
 /* card text — shared style with about section text */
 .car_card h4,
-.car_card p {
+.about_section_text {
   font-size: var(--font-size-heading-md);
   line-height: var(--line-height-text);
   color: var(--color-contrast-medium);
