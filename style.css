@@ -1,4 +1,6 @@
+
 /* imported porsche design system css custom properties */
+
 :root {
   /* colors */
   --color-primary:          #000000;
@@ -10,10 +12,10 @@
   --color-contrast-high:    #212121;
 
   /* typography */
-  --font-size-display-medium: clamp(2rem,   4vw, 3.75rem);
-  --font-size-heading-xl:     clamp(1.5rem, 3vw, 2.5rem);
-  --font-size-heading-md:     clamp(1rem,   1.5vw, 1.5rem);
-  --font-size-text-md:        1rem;
+  --font-size-display-medium: clamp(1.25rem, 2.5vw, 2rem);
+  --font-size-heading-xl:     clamp(1rem,   2vw,   1.5rem);
+  --font-size-heading-md:     clamp(0.75rem, 1vw,  1rem);
+  --font-size-text-md:        0.875rem;
 
   --font-weight-regular:    400;
   --font-weight-semi-bold:  600;
@@ -22,11 +24,11 @@
   --line-height-text:       1.6;
 
   /* spacing */
-  --spacing-xs:  0.5rem;
-  --spacing-sm:  1rem;
-  --spacing-md:  1.5rem;
-  --spacing-lg:  2.5rem;
-  --spacing-xl:  4rem;
+  --spacing-xs:  0.375rem;
+  --spacing-sm:  0.75rem;
+  --spacing-md:  1rem;
+  --spacing-lg:  1.75rem;
+  --spacing-xl:  3rem;
 
   /* border */
   --border-radius-md: 8px;
@@ -81,7 +83,7 @@ img {
   transition: border-color var(--transition-speed) var(--transition-easing);
 }
 
-/* about btn - hover */
+/* about btn hover */
 .navbar_btn:hover {
   border-bottom-color: var(--color-primary);
 }
@@ -112,7 +114,7 @@ img {
 .hero_title {
   position: relative;
   z-index: 1;
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(2rem, 5vw, 4.5rem);
   color: #fff;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -121,16 +123,16 @@ img {
 .hero_subtitle {
   position: relative;
   z-index: 1;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.75rem, 1.25vw, 1rem);
   color: #fff;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 /* cards */
 .main_content {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: var(--spacing-lg);
 }
@@ -150,9 +152,16 @@ img {
   background-color: var(--color-bg-surface);
   border-radius: var(--border-radius-md);
   overflow: hidden;
-  padding: 0px 0px 20px 0px;
+  padding: 0px 0px 16px 0px;
   transition: box-shadow var(--transition-speed) var(--transition-easing),
               transform  var(--transition-speed) var(--transition-easing);
+}
+
+/* card image */
+.car_card_image {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
 }
 
 /* shadow on hover */
@@ -161,35 +170,40 @@ img {
   transform: translateY(-4px);
 }
 
-/* card text — shared style with about section text */
+/* card text */
 .car_card h4,
 .about_section_text {
   font-size: var(--font-size-heading-md);
   line-height: var(--line-height-text);
   color: var(--color-contrast-medium);
-  padding: 4px 40px;
+  padding: 2px 20px;
 }
 
-/* audio components — matches card paragraph padding */
+.car_card p {
+  font-size: var(--font-size-text-md);
+  padding: 0 20px;
+  margin: 0 0 4px;
+}
+
+/* audio components */
 .card_audio {
-  padding: 4px 40px 0px;
+  padding: 4px 20px 0px;
 }
 
 .audio_btn {
-  padding: 12px 32px;
-  color: #000000;
-  font-size: var(--font-size-heading-md);
+  padding: 8px 20px;
+  font-size: var(--font-size-text-md);
   font-family: 'Porsche Next', Arial, sans-serif;
   border: none;
   background: var(--color-primary);
   color: #fff;
   cursor: pointer;
   border-radius: var(--border-radius-md);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   transition: background var(--transition-speed) var(--transition-easing);
 }
 
-/* audio btn - hover */
+/* audio btn hover */
 .audio_btn:hover {
   background: var(--color-contrast-medium);
 }
@@ -197,15 +211,15 @@ img {
 progress {
   display: block;
   width: 100%;
-  height: 6px;
-  margin-top: 8px;
+  height: 4px;
+  margin-top: 6px;
   accent-color: #000;
 }
 
 /* about */
 .about_section {
   padding: var(--spacing-xl) var(--spacing-lg);
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -231,7 +245,6 @@ progress {
 
 .origin_logo {
   width: 500px;
-/* wanted to manually size the logo */
 }
 
 /* timeline */
@@ -241,11 +254,6 @@ progress {
   gap: 2rem;
   margin-bottom: 3rem;
 }
-
-/* .timeline_entry:nth-child(even) {
-  flex-direction: row-reverse;
-} */
-/* couldn't decide if I wanted to have a staggered layout or not :( */
 
 .timeline_img {
   width: 300px;
